@@ -87,15 +87,16 @@
 		  default:
 		      product = 'Please Select';
 		};
-		
-		embedded_svc.settings.displayHelpButton = false; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 		embedded_svc.settings.prepopulatedPrechatFields = {
 
 		 What_product_is_your_enquiry_about__c: product,
 		 What_would_you_like_to_contact_us_about__c: 'Please Select'
 		 	
 		};
+		
+		embedded_svc.settings.displayHelpButton = false; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
