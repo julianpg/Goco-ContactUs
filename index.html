@@ -70,7 +70,15 @@
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = false; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-
+		embedded_svc.settings.prepopulatedPrechatFields = {
+		    FirstName: “John”,
+		    LastName: “Doe”,
+		    Email: “john.doe@salesforce.com”,
+		    What_product_is_your_enquiry_about__c:"Please Select",
+		    What_would_you_like_to_contact_us_about__c:"Please Select,
+		    Subject: “Hello”
+		
+		};
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
