@@ -68,9 +68,9 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		console.log(gslbBaseURL);
+		console.log(window.location.href);
 		let product = '';
-		const url = gslbBaseURL;
+		const url = window.location.href;
 		const findTerm = (term) => {
 		  if (url.includes(term)){
 		    return url;
