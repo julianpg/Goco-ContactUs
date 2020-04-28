@@ -68,13 +68,32 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
+		console.log(gslbBaseURL);
+		let product = '';
+		const url = gslbBaseURL;
+		const findTerm = (term) => {
+		  if (url.includes(term)){
+		    return url;
+		  }
+		};
+
+		switch (url) {
+		  case findTerm('Home'):
+		      product= 'Home';
+		      break;
+		  case findTerm('Car'):
+		      product = 'Car';
+		      break;
+		  default:
+		      product = 'Please Select';
+		};
+		
 		embedded_svc.settings.displayHelpButton = false; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 		embedded_svc.settings.prepopulatedPrechatFields = {
-		 FirstName: 'James',
-		 LastName: 'D',
-		 Email: 'James@d.com',
-		 What_product_is_your_enquiry_about__c: 'Home'
+
+		 What_product_is_your_enquiry_about__c: product,
+		 What_would_you_like_to_contact_us_about__c: 'Please Select'
 		 	
 		};
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
