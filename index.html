@@ -68,7 +68,7 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		console.log(window.location.href);
+		/*console.log(window.location.href);
 		let product = '';
 		const url = window.location.href;
 		const findTerm = (term) => {
@@ -86,10 +86,10 @@
 		      break;
 		  default:
 		      product = 'Please Select';
-		};
+		};*/
 		embedded_svc.settings.prepopulatedPrechatFields = {
 
-		 What_product_is_your_enquiry_about__c: product,
+		 What_product_is_your_enquiry_about__c: 'Please Select',
 		 What_would_you_like_to_contact_us_about__c: 'Please Select'
 		 	
 		};
